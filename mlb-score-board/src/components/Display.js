@@ -10,5 +10,18 @@ export class Display extends React.Component {
     }
   };
 
+  addStrike = () => {
+    const stateStrikes = this.state.strikes;
+    if (stateStrikes < 2) {
+      this.setState(() => {
+        return {strikes: strikeNum(stateStrikes)}
+      })
+    } else {
+      this.setState(() => {
+        return {strikes: 0, balls: 0}
+      })
+    }
+  };
+
   
 }
