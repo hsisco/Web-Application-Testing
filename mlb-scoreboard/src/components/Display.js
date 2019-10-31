@@ -1,5 +1,6 @@
 import React from 'react';
-import Dashboard from './Dashboard';
+import { Container, Row, Col } from 'reactstrap';
+import { Dashboard } from './Dashboard';
 
 
 export const plusStrike = (currStrikes) => {
@@ -65,12 +66,26 @@ export class Display extends React.Component {
   render(){
     return(
       <div className="Display">
+        <Container>
+        <Row>
+        <Col sm="4" />
+        <Col sm="4">
+          <h3>STRIKE</h3>
+          <h1>{this.state.strikes}</h1>
+          </Col>
+        <Col sm="4">
+          <h3>BALL</h3>
+          <h1>{this.state.balls}</h1>
+        </Col>
+        <Col sm="4" />
+      </Row>
         <Dashboard 
           addStrike={this.addStrike}
           addBall={this.addBall}
           addFoul={this.addFoul}
           hit={this.hit}
           />
+          </Container>
       </div>
     );
   }
