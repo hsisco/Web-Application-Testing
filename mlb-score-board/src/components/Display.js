@@ -53,6 +53,12 @@ export class Display extends React.Component {
     this.setState({strikes: 0, balls: 0})
   }
 
-
+  render(){
+    return(
+      <div className="Display">
+        
+      </div>
+    );
+  }
 
 }
