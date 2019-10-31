@@ -36,8 +36,22 @@ export class Display extends React.Component {
     }
   };
 
+  foulBall = () => {
+    const stateStrikes = this.state.strikes;
+    if (stateStrikes < 2) {
+      this.setState(() => {
+        return {strikes: stateStrikes + 1}
+      })
+    } else {
+      this.setState(() => {
+        return {strikes: stateStrikes}
+      })
+    }
+  };
 
-
+  hit = () => {
+    this.setState({strikes: 0, balls: 0})
+  }
 
 
 
