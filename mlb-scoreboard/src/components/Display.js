@@ -1,5 +1,5 @@
 import React from 'react';
-// import Dashboard from './Dashboard';
+import Dashboard from './Dashboard';
 
 
 export const plusStrike = (currStrikes) => {
@@ -45,7 +45,7 @@ export class Display extends React.Component {
     }
   };
 
-  foulBall = () => {
+  addFoul = () => {
     const stateStrikes = this.state.strikes;
     if (stateStrikes < 2) {
       this.setState(() => {
@@ -65,7 +65,12 @@ export class Display extends React.Component {
   render(){
     return(
       <div className="Display">
-
+        <Dashboard 
+          addStrike={this.addStrike}
+          addBall={this.addBall}
+          addFoul={this.addFoul}
+          hit={this.hit}
+          />
       </div>
     );
   }
