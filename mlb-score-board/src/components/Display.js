@@ -14,7 +14,7 @@ export class Display extends React.Component {
     const stateStrikes = this.state.strikes;
     if (stateStrikes < 2) {
       this.setState(() => {
-        return {strikes: strikeNum(stateStrikes)}
+        return {strikes: stateStrikes + 1}
       })
     } else {
       this.setState(() => {
@@ -23,5 +23,22 @@ export class Display extends React.Component {
     }
   };
 
-  
+  addBall =() => {
+    const stateBalls = this.state.balls;
+    if (stateBalls < 3) {
+      this.setState(() => {
+        return {balls: stateBalls + 1}
+      })
+    } else {
+      this.setState(() => {
+        return {strikes: 0, balls: 0}
+      })
+    }
+  };
+
+
+
+
+
+
 }
