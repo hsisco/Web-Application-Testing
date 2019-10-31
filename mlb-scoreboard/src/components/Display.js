@@ -1,6 +1,15 @@
 import React from 'react';
 // import Dashboard from './Dashboard';
 
+
+export const plusStrike = (currStrikes) => {
+  return currStrikes + 1;
+}
+export const plusBall = (currBall) => {
+  return currBall + 1;
+}
+
+
 export class Display extends React.Component {
   constructor(){
     super();
@@ -14,7 +23,7 @@ export class Display extends React.Component {
     const stateStrikes = this.state.strikes;
     if (stateStrikes < 2) {
       this.setState(() => {
-        return {strikes: stateStrikes + 1}
+        return {strikes: plusStrike(stateStrikes)}
       })
     } else {
       this.setState(() => {
@@ -27,7 +36,7 @@ export class Display extends React.Component {
     const stateBalls = this.state.balls;
     if (stateBalls < 3) {
       this.setState(() => {
-        return {balls: stateBalls + 1}
+        return {balls: plusBall(stateBalls)}
       })
     } else {
       this.setState(() => {
@@ -40,7 +49,7 @@ export class Display extends React.Component {
     const stateStrikes = this.state.strikes;
     if (stateStrikes < 2) {
       this.setState(() => {
-        return {strikes: stateStrikes + 1}
+        return {strikes: plusStrike(stateStrikes)}
       })
     } else {
       this.setState(() => {
@@ -56,7 +65,7 @@ export class Display extends React.Component {
   render(){
     return(
       <div className="Display">
-        
+
       </div>
     );
   }
