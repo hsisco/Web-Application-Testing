@@ -6,7 +6,7 @@ export const addOne = (currNum) => {
   return currNum + 1;
 }
 
-export class Display extends React.Component {
+class Display extends React.Component {
   constructor(){
     super();
     this.state = {
@@ -24,7 +24,7 @@ export class Display extends React.Component {
       })
     } else {
       this.setState(() => {
-        return {strikes: 0, balls: 0}
+        return {strikes: 0, balls: 0, fouls: 0}
       })
     }
   };
@@ -37,7 +37,7 @@ export class Display extends React.Component {
       })
     } else {
       this.setState(() => {
-        return {strikes: 0, balls: 0}
+        return {strikes: 0, balls: 0, fouls: 0}
       })
     }
   };
@@ -84,3 +84,5 @@ export class Display extends React.Component {
     );
   }
 }
+
+export default Display;
