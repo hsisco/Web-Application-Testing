@@ -17,12 +17,25 @@ export class Display extends React.Component {
       balls: 0
     }
   };
-  
+
   addStrike = () => {
     const stateStrikes = this.state.strikes;
     if (stateStrikes < 2) {
       this.setState(() => {
         return {strikes: plusStrike(stateStrikes)}
+      })
+    } else {
+      this.setState(() => {
+        return {strikes: 0, balls: 0}
+      })
+    }
+  };
+
+  addBall =() => {
+    const stateBalls = this.state.balls;
+    if (stateBalls < 3) {
+      this.setState(() => {
+        return {balls: plusBall(stateBalls)}
       })
     } else {
       this.setState(() => {
